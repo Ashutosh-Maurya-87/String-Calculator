@@ -10,5 +10,9 @@ describe('String Calculator', ()=> {
     test('throw an error when negative number is passed as string',() => {
         expect(() =>stringCalcAddFunc('1,-2,-3,-4')).toThrow('Negative number is not allowed')
     })
+
+    test('handling new line in between numbers',() => {
+        expect(stringCalcAddFunc('1\n2,3\n4')).toBe(10)
+    })
 })
 console.log('empty test cases is passed')
