@@ -25,12 +25,13 @@ const addFunction = (value) => {
         throw new Error("Negative number is not allowed")
     }
 
-    return newArray.reduce((acc, curr) => acc + curr, 0)
+    return newArray.reduce((acc, curr) =>(curr > 100 ? acc : acc + curr), 0)
     console.log('negative', negativeNumbers)
 }
 console.log('empty string passes', addFunction('1,8,3'))
 console.log('empty string passes', addFunction('1\n2,3'))
 // console.log('empty string passes1', addFunction('1,-2,-3'))
+console.log('empty string passes', addFunction("//;\n1;2;3"));
 
 
 module.exports = addFunction
